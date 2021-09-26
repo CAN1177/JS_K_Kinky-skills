@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div  class="container">
+		yican163com
+	</div>
+
+
+	<script>
+		/*
+			字面量创建 vs 对象创建
+		*/
+
+
+		// // 字面量创建
+		// let str = "79腌989677机会"
+		// // BUt，字面量无法区分变量
+		// let a = "7"
+		// console.log(/a/.test(str)) //false
+		// console.log(/7/.test(str)) //true
+		// // 特殊情况
+		// console.log(eval(`/${a}/`).test(str)) //true
+
+
+
+		// // 对象的使用
+		// let newStr = "yican@163.com"
+		// let b = "2"
+		// let reg = new RegExp(b, 'g')  //可以使用变量
+		// let reg_b = new RegExp('163', 'g') //注意匹配对象不需要加转义符“/ /”
+		// // console.log(reg.test(newStr)); // true
+
+		// demo练习
+		let con = prompt("输入内容，支持正则")
+		let reg = new RegExp(con, 'g')
+		let div = document.querySelector('div')  
+		div.innerHTML= div.innerHTML.replace(reg, search=>{
+			return `<span style="color:red; font-size: 36px">${search} <span>`
+		})
+
+		
+
+
+
+
+	</script>
+</body>
+</html>

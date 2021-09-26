@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+
+	<script>
+		/*
+			简单演示，大到可以做后台模块的替换、全局匹配自己想要的内容（网址、邮箱、等等）
+		*/
+
+		// 取出字符串中的数字
+		let str = "shdjshdksadk89898webqjwe9973"
+
+		// 一般做法
+		let num = [...str].filter(item => !Number.isNaN(parseInt(item))).join(',')
+		console.log('num: ', num);
+
+		// 正则
+		let regex = str.match(/\d/g).join(',')
+		console.log('regex: ', regex);
+
+
+
+	</script>
+</body>
+</html>
