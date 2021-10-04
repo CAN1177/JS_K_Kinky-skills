@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script> 
+		/*
+				选择符的使用 ｜
+		*/ 
+
+
+		// 注意是对两边都匹配
+		let str="0986-897654"
+		console.log(/0986\-\d{6}|0987\-\d{6}/.test(str))  //true
+
+		// but 可以使用原子组 简写 去掉重复(加括号)
+		let str2="0986-897654"
+		console.log(/(0986|0987)\-\d{6}/.test(str2))  //true
+	
+	</script>
+</body>
+</html>
