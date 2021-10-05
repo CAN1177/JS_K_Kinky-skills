@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="password" placeholder="Enter your password" />
+
+    <script>
+			// 就是多个正则用到一个数组中去
+      let password = document
+        .querySelector('[name="password"]')
+        .addEventListener("keyup", (e) => {
+          let reg = [/^[a-z0-9]{5,10}$/i, /[A-Z]/];
+          let result = reg.every((password) => password.test(e.target.value));
+          console.log("result: ", result ? "正确" : "密码错误");
+        });
+    </script>
+  </body>
+</html>

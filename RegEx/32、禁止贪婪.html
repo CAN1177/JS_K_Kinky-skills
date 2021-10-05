@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>
+
+		let str = "annnnnnn"
+		// ?号 往少的那方面倾斜 (包括an)
+		console.log(str.match(/an+?/));
+		// 一样 加?号禁止贪婪(只包括a)
+		console.log(str.match(/an*?/));  
+
+	</script>
+</body>
+</html>
