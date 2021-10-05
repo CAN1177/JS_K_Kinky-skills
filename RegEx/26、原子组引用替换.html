@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+			// h1标签换为p标签
+      let str = `
+			<h1>yicandisajdao</h1>
+			<span>77777777</span>
+			<div>888888</div>
+		`;
+
+      let reg = /<(h[1-6])>([\s\S]+)<\/\1>/gi;
+      // console.log(str.replace(reg, '$2'))
+      let result = str.replace(reg, (p0, p1, p2) => {
+        console.log(p0, "p0 is");
+        console.log(p1, "p1 is");
+        console.log(p2, "p2 is");
+        return `<p>${p2}</p>`;
+      });
+      console.log("result: ", result);
+    </script>
+  </body>
+</html>

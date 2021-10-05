@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 重复匹配对原子组的影响 ===》影响原子组整体
+      let str = "anananan";
+      console.log(str.match(/(an)+/));
+
+      // 电话正则
+      let tel = "0932-898998";
+      console.log(tel.match(/^0\d{3,4}-\d{6,8}$/));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script>
+		// demo 分组之获取域名
+		let str = `
+			https://can1177.com
+			https://www.can1177.com
+			https://manji.cn
+		`
+		// ?: 是忽略, 第一个是指忽略（或有或无）https,第二个是忽略组编号（这里就不能使用上一节的p2）
+		let reg =  /https?:\/\/((?:\w+\.)?\w+\.(?:com|org|cn))/gi
+		let urls = []
+		while ((res= reg.exec(str))) {
+			urls.push(res[1])
+		}
+		console.dir(urls, '获取的域名');
+	</script>
+
+</body>
+</html>
