@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+		/*
+		// $的使用
+		1、正常使用
+		2、$` 匹配内容的前面
+		3、$' 匹配内容的后面
+		4、$& 匹配内容的自身
+		*/
+		let str = "(0932)897890  (0936)897898"
+		console.log(str.match(/\((\d{3,4})\)(\d{6,8})/g))
+		let reg = /\((\d{3,4})\)(\d{6,8})/g
+		console.log(str.replace(reg, '$1-$2'))
+
+
+
+	</script>
+</body>
+</html>

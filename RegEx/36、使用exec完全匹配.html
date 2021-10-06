@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>11-00</h1>
+    <h2>11-22</h2>
+    <h3>11-33</h3>
+
+    <script>
+      function search(string, reg) {
+        let result = [];
+        while ((res = reg.exec(string))) {
+          result.push(res);
+        }
+        return result;
+      }
+      let match = search(document.body.innerHTML, /<(h[1-6])>[\s\S]+<\/\1>/gi);
+      console.log("match: ", match);
+    </script>
+  </body>
+</html>

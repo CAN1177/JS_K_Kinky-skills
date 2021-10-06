@@ -16,7 +16,7 @@
 			if (res){
 				let str = this.replace(res[0], "^".repeat(res[0].length))
 				let match = str.matchAll(reg) || []
-				return [res, ...match];
+				return [res, ...match]; 
 			}
 		}
 
