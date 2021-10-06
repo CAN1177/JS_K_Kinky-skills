@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+	  <main>
+      <a style="color:red"  href="http://can1177.com">我的blog</a>
+      <a href="http://baidu.com">百度</a>
+      <a href="http://www.yahoo.com">Yahoo</a>
+    </main>
+
+    <script>
+			// 使用类型别名获取相应内容
+			let main  = document.querySelector('body main');
+			const reg = /<a.*?href=(['"])(?<link>.*?)\1>(?<content>.*?)<\/a>/ig;
+			const getResult = [] 
+			for (const iterator of  main.innerHTML.matchAll(reg)) {
+				console.log('iterator: ', iterator['groups']);
+				getResult.push(iterator['groups'])
+				
+			}
+			//使用原子组别名 组装为自己想要的结果
+			console.log('getResult: ', getResult);
+		</script>
+  </body>  
+</html>

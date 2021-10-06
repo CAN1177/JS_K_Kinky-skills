@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = `
+		<h1>anta2323</h1>
+		<span>anta</span> 
+		<h2>2222222222</h2>
+		`;
+      // const reg = /<(h[1-6])>(.*?)<\/\1>/gi;
+      // console.log(str.replace(reg, "<h4>$2</h4>"));
+
+			//这里的con就是别名,返回结果是一致
+			const reg = /<(h[1-6])>(?<con>.*?)<\/\1>/gi;
+      console.log(str.replace(reg, "<h4>$<con></h4>"));
+    </script>
+  </body>
+</html>
