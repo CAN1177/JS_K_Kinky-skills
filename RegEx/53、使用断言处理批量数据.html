@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<main>
+		<a href="https://github.com">22</a>
+		<a href="https://can1177.com">33</a>
+		<a href="http://baidu.com/">44</a>
+	</main>
+
+
+	<script>
+		const main = document.querySelector('body main')
+
+		const reg = /https:\/\/([a-z]+)?\..+?(?=\/)/gi
+
+		main.innerHTML= main.innerHTML.replace(reg, v=>{
+			return "http://can1177.com"
+		})
+		console.log(main);
+	</script>
+</body>
+</html>
