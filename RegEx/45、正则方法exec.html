@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>小菜鸟的打怪升级之路菜鸟</main>
+    <script>
+
+			let main  = document.querySelector('body main')
+
+			// 返回结果一样，但是全局匹配就不一样啦
+			console.log(main.innerHTML.match(/菜鸟/), "match非全局");
+			console.log(/菜鸟/.exec(main.innerHTML), "exex非全局");
+			console.log("-----全局----");
+			console.log(main.innerHTML.match(/菜鸟/g), "match全局");
+			console.log(/菜鸟/g.exec(main.innerHTML), "exex全局");
+
+
+			// 所以，可以用 exec统计次数
+
+			let reg = /菜鸟/g
+			let count = 0
+			while ((res = reg.exec(main.innerHTML))){
+				count ++;
+			}
+			console.log('count: ', count);
+		</script>
+  </body>
+</html>

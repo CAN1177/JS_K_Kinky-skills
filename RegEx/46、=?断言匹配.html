@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>小菜鸟的打怪升级之路菜鸟</main>
+    <script>
+
+			let main  = document.querySelector('body main')
+
+			let reg = /菜鸟(?=的)/g
+
+			main.innerHTML = main.innerHTML.replace(reg, `<a href="http://can1177.com" >$&<\/a>`)
+		</script> 
+  </body>
+</html>

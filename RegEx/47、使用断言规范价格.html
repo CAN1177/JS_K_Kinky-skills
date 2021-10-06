@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = `
+				js,300元,300人
+				java,400.00元,600人
+				node, 200元,120人
+			`;
+
+			let reg = /(\d+)(.00)?(?=元)/gi
+			str = str.replace(reg, (val, ...args) =>{
+				args[1] = args[1] || '.00'
+				return args.splice(0,2).join('')
+			})
+			console.log('str: ', str);
+    </script>
+  </body>
+</html>

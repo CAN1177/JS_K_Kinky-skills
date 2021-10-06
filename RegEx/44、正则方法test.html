@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+	  
+		<input type="text" name='email' placeholder="Email">
+    <script>
+			/* 
+				// 字符串的方法
+				match matchAll search replace
+
+				//正则方法
+				test  返回boolean
+
+			*/ 
+			const email = document.querySelector('[name="email"]');
+			email.addEventListener('keyup',(e) => {
+				  let result =  /^[\w-]+@(\w+\.)+(com|org|cn)$/i.test(e.target.value)
+					console.log('result: ', result);
+			})
+		</script>
+  </body>  
+</html>
