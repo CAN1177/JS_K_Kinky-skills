@@ -31,10 +31,20 @@ module.exports = {
         // 注意这里是执行是从又到左
         use: ["style-loader", "css-loader"],
       },
-      //less 解析
+      //less 解析, 这里需要css解析的了loader
       {
         test: /\.less$/,
         use: ["style-loader", "css-loader", "less-loader",]
+      },
+      // 图片解析
+      { 
+        test: /\.(png|jpg|gif|jpeg)$/, 
+        use: 'file-loader'
+      },
+      // 字体解析
+      {
+        test: /\.(woff||woff2||eot||ttf||otf)$/,
+        use: "file-loader"
       }
     ],
   },

@@ -5,10 +5,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './search.less'
+import img from "./images/1.jpg"
 
 class Search extends React.Component {
   render() {
-    return <div className="search-text">搜索文字的内容</div>;
+    return <div className="search-text">搜索文字的内容
+      <img src={img} alt="" />
+    </div>;
+ 
   }
 }
 
