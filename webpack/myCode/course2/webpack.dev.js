@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require("path");
+const { webpack } = require("webpack");
 
 module.exports = {
   // entry: "./src/index.js",
@@ -18,7 +19,7 @@ module.exports = {
     filename: "[name].js",
     path: path.join(__dirname, "dist"),
   },
-  mode: "production",
+  mode: "development",  // production or development
   module: {
     rules: [
       {
@@ -48,4 +49,11 @@ module.exports = {
       }
     ],
   },
+  plugins: [
+    // new webpack.HotModuleReplacementPlugin(),
+  ],
+  devServer: {
+    // contentBase: './dist',
+    hot: true,
+  }
 };
