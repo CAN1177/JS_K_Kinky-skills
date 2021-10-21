@@ -9,8 +9,9 @@ module.exports = {
     main: './src/index.js',
   },
   devServer: {
+    // devServer 从哪里获取内容
     contentBase: './dist'
-  },
+  }, 
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -21,6 +22,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      // 缓存设为false
       cache: false
     }),
     new CleanWebpackPlugin(),
